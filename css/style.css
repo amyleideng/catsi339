@@ -1,0 +1,259 @@
+
+/* mobile first */
+body{
+    font-family: "Arial", serif;
+    background-image: url("../images/concrete_seamless.png");
+    background-color:#f1f1f1;
+    margin: 0px;
+    padding: 0px;
+}
+
+header{
+    display:flex;
+    align-items: center;
+    flex-direction: row;
+    /* padding: 30px; */
+    align-items: flex-end;
+    text-align:right;
+}
+
+header, p, h1 {
+    margin:30px;
+}
+
+.nav_links{
+    display:flex;
+    flex-direction: column;
+    white-space: nowrap;
+    padding: 20px;
+}
+
+li a {
+    display: block;
+    margin: 10px;
+}
+
+a:visited{
+    color: cornflowerblue;
+}
+
+.nav_item a {
+    text-decoration: none;
+}
+
+.nav_item a:hover, a:focus{
+    color:#ff69b4;
+    text-decoration:underline;
+}
+
+.active a {
+    color:#000000;
+    text-decoration:underline;
+}
+
+a.skip{
+    background: white;
+    left: 0;
+    padding: 10px;
+    position: fixed;
+    top: -40px;
+    z-index: 1;
+  }
+
+  a.skip:focus{
+    top:0px;
+    color: black;
+    text-decoration-style: solid;
+  }
+
+.gallery {
+    display: grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 10% auto;
+    gap: 20px;
+    row-gap: 5%;
+}
+
+div.container {
+    display: flex;
+    flex-direction: column;
+    max-width: 100%;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 20em;
+    align-items: center;
+}
+
+.container > img {
+    max-width: 100%;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 20em;
+}
+
+.orange > img {
+    max-width: 100%;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 20em;
+}
+.owners > img {
+    max-width: 100%;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 20em;
+}
+
+.black > img {
+    max-width: 100%;
+    margin: 10px;
+    width: 100%;
+    border-radius: 5px;
+    max-height: 20em;
+}
+
+
+/* div.gallery {
+    display:grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+
+} */
+
+div.container{
+    /* height:auto; */
+    width:auto;
+}
+
+button {
+    background-color: white; 
+    /* border: white 3px solid; */
+    border: none;
+    color: rgb(201, 89, 89);
+    padding: 5px 10px;
+    text-align: center;
+    display: inline-block;
+    font-size: 30px;
+    border-radius: 10px;
+}
+
+button:hover {
+    background-color: lightblue; 
+}
+
+h1.title {
+    font-size: 80px;
+    /* white-space: nowrap; */
+    text-align: left;
+    align-self: center;
+}
+
+h1{
+    font-family: moonblossom,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    font-size: 50px;
+    padding-top:40px;
+}
+
+
+p {
+    line-height: 2em;
+    padding-bottom: 40px;
+    padding-top: 40px;
+}
+
+footer {
+    background-color: black;
+    color: white;
+    padding: 20px;
+    text-align:center;
+    margin-top: 40px;
+    /* display: block; */
+}
+
+.like{
+    display:grid;
+    grid-template-columns: repeat(2, 50%);
+    align-items: center;
+    justify-content: space-evenly;
+    width: 90%;
+    margin: 0 auto;
+    gap: 20px;
+
+}
+/* tablet screen */
+@media screen and (min-width: 650px) {
+    div.gallery {
+        display: grid;
+        grid-template-columns: repeat(3, 33%);
+        /* width: 60%; */
+    }
+    
+    header{
+        display:flex;
+        align-items: center;
+        flex-direction: row;
+        padding: 50px;
+        justify-content:flex-end;
+    }
+
+    .nav_links{
+        display:flex;
+        flex-direction: column;
+    }
+
+    h1{
+        text-align: center;
+        padding:40px;
+    }
+
+    p {
+        text-align: center;
+        width: 75%;
+        margin: auto;
+    }
+
+    /* .orange > img:first-child{
+        display: grid;
+        grid-column: span 3;
+    } */
+
+}
+/* desktop screen */
+@media screen and (min-width: 900px) {
+    div.gallery {
+        display: grid;
+        grid-template-columns: repeat(4, 25%);
+    }
+    
+    header{
+        display:flex;
+        align-items: center;
+        flex-direction: column;
+        padding: 50px;
+        justify-content:space-around;
+    }
+
+    .nav_links{
+        display:flex;
+        flex-direction: row;
+    }
+
+    .orange > img:first-child{
+        display: grid;
+        grid-column: auto;
+        /* max-height: auto; */
+    }
+}
