@@ -2,17 +2,19 @@
 // const blackHeart = '\u2665';
 const whiteHeart = '♡';
 const blackHeart = '♥';
-let button = document.querySelector('button');
-button.addEventListener('click', toggle);
+let buttons = document.querySelectorAll('button');
 
-// can only like first heart 
-
-function toggle() {
-  const like = button.textContent;
-  if(like==whiteHeart) {
-    button.textContent = blackHeart;
-  } else {
-    button.textContent = whiteHeart;
-  }
+for (const button of buttons) {
+  button.addEventListener('click', function() {
+    const like = button.textContent;
+    if(like==whiteHeart) {
+      button.textContent = blackHeart;
+    } else {
+      button.textContent = whiteHeart;
+    }
+  });
 }
+
+
+
 

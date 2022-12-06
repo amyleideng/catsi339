@@ -8,13 +8,16 @@
     <link rel="stylesheet" type="text/css" href="css/html5reset.css">
     <link rel="stylesheet" type="text/css" href="css/style.css">
     <link rel="stylesheet" href="https://use.typekit.net/sxa8sbn.css">
+    <link rel="stylesheet" href="https://use.typekit.net/yql7ztx.css">
     <link href="path/to/lightbox.css" rel="stylesheet" />
     <title>Cats Galore</title>
 </head>
 <body>
     <a class = "skip" href="#skip">Skip to Content</a>
     <header>
-        <h1 class="title">Cats Galore</h1>
+        <h1>
+            <a class="title" href= "index.html">Cats Galore</a>
+        </h1>
         <nav>
           <ul class="nav_links">
               <li class="active"><a href = "index.html">Home</a></li>
@@ -37,6 +40,45 @@
         <img src = "images/owners/owner5.jpeg" alt = "woman with a cat">
         <img src = "images/owners/owner6.jpeg" alt = "woman with a cat">
     </div>
+
+    <form>
+      <fieldset>
+        <legend>What's your favorite cat?</legend>
+
+        <div class="questions">
+          <label for="name">Your Name</label>
+          <input type="text" placeholder="Enter Your Name" name="yourname" id="name">
+      
+          <label for="email">Your Email</label>
+          <input type="email" name="email" id="email" placeholder="Enter Your Email">
+
+          <label for="phone">Your Phone Number</label>
+          <input type="tel" name="phone" id="phone" placeholder="Enter your Phone Number">
+        </div>
+
+        
+        <p>Thank you for browsing our site! What is your favorite type of cat?</p>
+        <div class="radio">
+          <input type="radio" id="orange_choice" name="orange" value="Orange Cat">
+          <label for="orange_choice">Orange Cat</label><br>
+          
+          <input type="radio" id="tabby_choice" name="tabby" value="Tabby Cat">
+          <label for="tabby_choice">Tabby Cat</label><br>
+
+          <input type="radio" id="black_choice" name="black" value="Black Cat">
+          <label for="black_choice">Black Cat</label><br>
+        
+          <input type="radio" id="other_choice" name="other" value="Other">
+          <label for="other_choice">Other type of cat</label><br>
+        </div>
+
+        <label for="message">Leave A Message</label>
+        <textarea id="message" name="message" placeholder="Begin typing..."></textarea>
+    
+        <input type="submit">
+      </fieldset>
+     </form>
+
   </main>
   <footer>
     <p>University of Michigan SI 339 <br/>
