@@ -5,7 +5,6 @@ body{
     font-weight: 400;
     font-style: normal;
     /* font-family: Arial, Helvetica, sans-serif; */
-    background-image: url("../images/concrete_seamless.png");
     background-color:#f1f1f1;
     margin: 0px;
     padding: 0px;
@@ -13,7 +12,6 @@ body{
 
 header{
     display:flex;
-    /* align-items: center; */
     flex-direction: row;
     align-items: flex-end;
     text-align:right;
@@ -21,6 +19,7 @@ header{
 
 img {
     width: 100%;
+    border-radius: 8px;
 }
 
 header, p, h1 {
@@ -110,18 +109,22 @@ div.container {
 }
 
 button {
+    font-family: montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
     background-color: white; 
     border: none;
-    color: rgb(201, 89, 89);
+    color: #A30052;
     padding: 5px 10px;
     text-align: center;
-    font-size: 30px;
+    font-size: 20px;
     border-radius: 10px;
     margin-top: 10px;
+
 }
 
 button:hover {
-    background-color: lightblue; 
+    background-color: rgb(231, 239, 255); 
 }
 
 h1{
@@ -158,16 +161,6 @@ footer {
     text-align:center;
 }
 
-.like{
-    display:grid;
-    grid-template-columns: repeat(2, 50%);
-    align-items: center;
-    justify-content: space-evenly;
-    width: 90%;
-    margin: 0 auto;
-    gap: 20px;
-}
-
 div.poe {
     display: flex;
     flex-direction: column;
@@ -188,8 +181,8 @@ div.poe {
 
 .orange img, .black img, .tabby img{
     display: block;
-    /* width: 100%; */
     height: auto;
+    border-radius: 8px;
   }
   
   .overlay {
@@ -203,11 +196,13 @@ div.poe {
     opacity: 0%;
     transition: .5s ease;
     background-color: #808080;
+    border-radius: 8px;
   }
   
   .o1:hover .overlay, .o2:hover .overlay, .o3:hover .overlay, .o4:hover .overlay {
     opacity: 50%;
   }
+
   .b1:hover .overlay, .b2:hover .overlay, .b3:hover .overlay, .b4:hover .overlay,
   .b5:hover .overlay, .b6:hover .overlay, .b7:hover .overlay, .b8:hover .overlay, 
   .b9:hover .overlay, .b10:hover .overlay {
@@ -234,6 +229,27 @@ div.poe {
     opacity:100%;
   }
 
+  /* focus states for hover */
+
+  .o1:focus .overlay, .o2:focus .overlay, .o3:focus .overlay, .o4:focus .overlay {
+    opacity: 50%;
+  }
+
+  .b1:focus .overlay, .b2:focus .overlay, .b3:focus .overlay, .b4:focus .overlay,
+  .b5:focus .overlay, .b6:focus .overlay, .b7:focus .overlay, .b8:focus .overlay, 
+  .b9:focus .overlay, .b10:focus .overlay {
+    opacity: 50%;
+  }
+
+  .o1:focus .text, .o2:focus .text, .o3:focus .text, .o4:focus .text {
+    opacity:100%;
+  }
+  .b1:focus .text, .b2:focus .text, .b3:focus .text, .b4:focus .text, 
+  .b5:focus .text, .b6:focus .text, .b7:focus .text, .b8:focus .text, 
+  .b9:focus .text, .b10:focus .text  {
+    opacity:100%;
+  }
+
 /* form */
   form {
     border: 3px solid #f1f1f1;
@@ -256,7 +272,7 @@ div.poe {
     width:30%;
   }
   input {
-    width: 75%;
+    width: 100%;
     padding: 12px 20px;
     margin: 8px;
     display:inline-block;
@@ -281,7 +297,11 @@ div.poe {
   }
 
   input[type=submit] {
-    background-color: palevioletred;
+    font-family: montserrat,sans-serif;
+    font-weight: 400;
+    font-style: normal;
+    border-radius: 10px;
+    background-color: #1650BB;
     color: white;
     padding:20px;
     margin: 10px;
@@ -289,9 +309,10 @@ div.poe {
     width: 50%;
     display:block;
     margin:auto;
+    margin-top: 10px;
   }
   
-  input[type=submit]:hover {
+  input[type=submit]:hover, input[type=submit]:focus {
     opacity: 0.8;
   }
 /* form end */
@@ -306,7 +327,6 @@ div.poe {
     
     header{
         align-items: center;
-        /* padding: 50px; */
         justify-content:flex-end;
     }
 
@@ -324,16 +344,15 @@ div.poe {
     div.poe {
         flex-direction: row;
     }
-/* tablet form */
 
+
+/* tablet form */
     div.radio {
       display:flex;
       align-items: center;
     }
 
 }
-
-
 
 
 /* desktop screen */
@@ -344,15 +363,11 @@ div.poe {
     }
     
     header{
-        display:flex;
-        align-items: center;
         flex-direction: column;
-        padding: 50px;
         justify-content:space-around;
     }
-
+    
     .nav_links{
-        display:flex;
         flex-direction: row;
     }
 }

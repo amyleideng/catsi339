@@ -1,7 +1,7 @@
 // const whiteHeart = '\u2661';
 // const blackHeart = '\u2665';
-const whiteHeart = '♡';
-const blackHeart = '♥';
+const whiteHeart = '♡ Like';
+const blackHeart = '♥ Unlike';
 let buttons = document.querySelectorAll('button');
 
 for (const button of buttons) {
